@@ -70,10 +70,29 @@ namespace vek {
             std::move(&elem_[i + 1], &elem_[size_], &elem_[i]);
         }
 
-        void push_back(T el) {
-            if (size_ == cap_) resize(size_ * 2);
-            elem_[size_] = el;
-            size_++;
+        void push_back(const_reference value ) {
+            if (cap_ == 0) {
+                elem_ = new T[1];
+                elem_[0] = value;
+                cap_ = 1;
+                size_ = 1;
+            } else {
+                if (!(size_ < cap_)) {
+                    reserve(cap_ * 2);
+                }
+                elem_[size_++] = value;
+            }
+        }
+
+        void reserve(size_t ncap) {
+            if (cap_ < ncap) {
+                T *temp = new T[ncap];
+                for (auto i = 0; i < size_; i++)
+                    temp[i] = elem_[i];
+                delete[] elem_;
+                elem_ = temp;
+                cap_ = ncap;
+            }
         }
 
         void push_front(T n) {

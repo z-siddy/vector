@@ -6,12 +6,16 @@ int main() {
 //    vek::vector<int> v1(10); //savadarbis
 //    std::vector<int> v2(10); //originalus
     Timer timer;
+    int kartai = 0;
 
     timer.startClock();
-    int sz = 100000;  // 100000, 1000000, 10000000, 100000000
+    int sz = 100000000;  // 100000, 1000000, 10000000, 100000000
     vek::vector<int> v1;
-    for (int i = 1; i <= sz; i++)
+    for (int i = 1; i <= sz; i++) {
+        if(v1.capacity() == v1.size())
+            kartai++;
         v1.push_back(i);
+    }
     timer.endClock("Savadarbio vektorio uzpildymas");
 
     timer.startClock();
@@ -19,6 +23,8 @@ int main() {
         for (int j = 1; j <= sz; j++)
             v2.push_back(j);
     timer.endClock("Originalaus vektorio uzpildymas");
+    cout << sz << " elementu uzpildymas" << endl;
+    cout << "Savadarbiame vektoriuje ivyko " << kartai << " kartus atminties perskirstymas" << endl;
 
 //    //Size Funkcija
 //    cout << "SIZE:" << endl;

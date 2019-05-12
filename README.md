@@ -62,4 +62,37 @@ EMPTY(bool):
 ```
 
 ### Užpildymas
+```
+Savadarbio vektorio uzpildymas : 0 s
+Originalaus vektorio uzpildymas : 0 s
+10000 elementu uzpildymas
+```
+```
+Savadarbio vektorio uzpildymas : 0.003987 s
+Originalaus vektorio uzpildymas : 0.0059835 s
+100000 elementu uzpildymas
+```
+```
+Savadarbio vektorio uzpildymas : 0.0328687 s
+Originalaus vektorio uzpildymas : 0.0578491 s
+1000000 elementu uzpildymas
+```
+```
+Savadarbio vektorio uzpildymas : 0.187496 s
+Originalaus vektorio uzpildymas : 0.203458 s
+10000000 elementu uzpildymas
+```
+```
+Savadarbio vektorio uzpildymas : 2.85341 s
+Originalaus vektorio uzpildymas : 3.62831 s
+100000000 elementu uzpildymas
+```
 
+### Atminties perskirtymas
+
+```
+Savadarbio vektorio uzpildymas : 3.4069 s
+Originalaus vektorio uzpildymas : 3.45979 s
+100000000 elementu uzpildymas
+Savadarbiame vektoriuje ivyko 28 kartus atminties perskirstymas
+```
