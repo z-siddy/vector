@@ -8,7 +8,7 @@ int main() {
     Timer timer;
 
     timer.startClock();
-    int sz = 1000;  // 100000, 1000000, 10000000, 100000000
+    int sz = 100000;  // 100000, 1000000, 10000000, 100000000
     vek::vector<int> v1;
     for (int i = 1; i <= sz; i++)
         v1.push_back(i);
@@ -18,7 +18,7 @@ int main() {
     std::vector<int> v2;
         for (int j = 1; j <= sz; j++)
             v2.push_back(j);
-    timer.endClock("Originalaus vektorio uzpildynas");
+    timer.endClock("Originalaus vektorio uzpildymas");
 
 //    //Size Funkcija
 //    cout << "SIZE:" << endl;

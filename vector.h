@@ -99,11 +99,6 @@ namespace vek {
         }
 
         //Operatoriai---------------------------------------------------------
-        friend std::ostream & operator << (std::ostream & z, vek::vector<T> vect) {
-            for (auto i : vect)
-                cout << i << " ";
-            return z;
-        }
         reference operator[](size_t i) {
             if (i < 0 || capacity() <= i) throw std::out_of_range {"Vector::operator[]"};
             return elem_[i];
