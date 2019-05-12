@@ -1,0 +1,5 @@
+cmake-build-debug/*
+!cmake-build-debug/kursiokai.txt
+.idea
+.vscode
+main.exe
