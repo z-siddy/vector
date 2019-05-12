@@ -11,6 +11,7 @@
 #include <stdexcept>
 #include <cmath>
 #include "vector.h"
+#include <vector>
 
 using std::cin;
 using std::cout;

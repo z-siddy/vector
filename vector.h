@@ -59,9 +59,9 @@ namespace vek {
 
         size_t capacity() const { return cap_; }
 
-        bool empty() { return size_z == 0; }
+        bool empty() { return size_ == 0; }
 
-        void clear() { size_z = 0; delete[] elem_; elem_ = new T[cap_]; }
+        void clear() { size_ = 0; delete[] elem_; elem_ = new T[cap_]; }
 
         void erase(int i) {
             if (i < 0 || i >= size_)
@@ -77,10 +77,10 @@ namespace vek {
         }
 
         void push_front(T n) {
-            if (sz == cap) resize(sz * 2);
-            std::move(&elem[0], &elem[sz], &elem[1]);
-            elem[0] = n;
-            sz++;
+            if (size_ == cap_) resize(size_ * 2);
+            std::move(&elem_[0], &elem_[size_], &elem_[1]);
+            elem_[0] = n;
+            size_++;
         }
 
         void resize(size_t n) {
